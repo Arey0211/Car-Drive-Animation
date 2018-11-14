@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.container {
+  height: 500px;
+  width: 800px;
+  margin: 0 auto;
+  border: 5px solid black;
+  position: relative;
+  overflow: hidden;
+}
+
+.car {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: car 1s infinite;
+  z-index: 99;
+}
+
+.road {
+  position: absolute;
+  height:5px;
+  width: 100%;
+  background-color: #333;
+  top: 85%;
+}
+
+.fg-trees {
+  position: absolute;
+  top: 52%;
+  color: darkgreen;
+  z-index: 98;
+}
+
+#fg-tree-1,
+#fg-tree-2,
+#fg-tree-3,
+#fg-tree-4,
+#fg-tree-5 {
+  position: absolute;
+  animation: fgTrees 1s linear infinite;
+  transform: translateX(850px)
+}
+
+#fg-tree-2 {
+  animation-delay: .57s;
+}
+
+#fg-tree-3 {
+  animation-delay: .25s;
+}
+
+#fg-tree-4 {
+  animation-delay: .13s;
+}
+
+#fg-tree-5 {
+  animation-delay: .76s;
+}
+
+.bg-trees {
+  position: absolute;
+  top: 52%;
+  color: rgb(6, 68, 6);
+}
+
+#bg-tree-1,
+#bg-tree-2,
+#bg-tree-3,
+#bg-tree-4,
+#bg-tree-5,
+#bg-tree-6,
+#bg-tree-7,
+#bg-tree-8 {
+  position: absolute;
+  animation: bgTrees 6s linear infinite;
+  transform: translateX(850px);
+  z-index: 95;
+}
+
+#bg-tree-2 {
+  animation-delay: 1s;
+  transform: translateY(110px);
+}
+
+#bg-tree-3 {
+  animation-delay: 2s;
+}
+
+#bg-tree-4 {
+  animation-delay: 3s;
+}
+
+#bg-tree-5 {
+  animation-delay: 4s;
+}
+
+#bg-tree-6 {
+  animation-delay: 5s;
+}
+
+#bg-tree-7 {
+  animation-delay: 2.5s;
+}
+
+#bg-tree-8 {
+  animation-delay: 3.28s;
+}
+
+.mtn {
+  position: absolute;
+  top: 25%;
+  color: black;
+}
+
+#mtn-1,
+#mtn-2,
+#mtn-3,
+#mtn-4,
+#mtn-5,
+#mtn-6,
+#mtn-7 {
+  position: absolute;
+  animation: mtns 30s linear infinite;
+  transform: translateX(850px)
+}
+
+#mtn-2 {
+  animation-delay: 3s;
+}
+
+#mtn-3 {
+  animation-delay: 8s;
+}
+
+#mtn-4 {
+  animation-delay: 12s;
+}
+
+#mtn-5 {
+  animation-delay: 16s;
+}
+
+#mtn-6 {
+  animation-delay: 21s;
+}
+
+#mtn-7 {
+  animation-delay: 26s;
+}
+
+
+
+@keyframes car {
+  0% {
+    top: 60%;
+    left: 50%;
+  }
+
+  25% {
+    top: 60.5%;
+    left: 49.5%;
+  }
+
+  50% {
+    top: 60%;
+    left: 50%;
+  }
+
+  75% {
+    top: 60.5%;
+    left: 50.5%;
+  }
+
+  100% {
+    top: 60%;
+    left: 50%;
+  }
+}
+
+@keyframes fgTrees {
+  0% {
+    transform: translateX(850px);
+  }
+
+  100% {
+    transform: translateX(-150px);
+  }
+}
+
+@keyframes bgTrees {
+  0% {
+    transform: translateX(850px);
+  }
+
+  100% {
+    transform: translateX(-150px);
+  }
+}
+
+@keyframes mtns {
+  0% {
+    transform: translateX(850px);
+  }
+
+  100% {
+    transform: translateX(-200px);
+  }
+}
